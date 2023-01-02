@@ -17,6 +17,7 @@
   --preformatted: #444;
   --marked: #ffdd33;
   --disabled: #efefef;
+  --footnotes-box: #F9F9F9;
 }
 
 /* Dark theme */
@@ -31,6 +32,7 @@
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
+    --footnotes-box: #3F3F3F;
   }
   /* Add a bit of transparency so light media isn't so glaring in dark mode */
   img,
@@ -518,12 +520,17 @@ hr {
   margin: 1rem auto;
 }
 
+.footerthanks {
+  margin-top: 60px;
+  opacity: 80%;
+  font-size: 0.95rem;
+  font-style: italic;
+}
 .footerhr {
-  margin-top: 50px;
   opacity: 20%;
 }
 .footerbox {
-  opacity: 60%;
+  opacity: 80%;
   font-size: 0.9rem;
   margin-bottom: 60px;
 }
@@ -532,6 +539,17 @@ hr {
 }
 .footercat {
   float: right;
+}
+
+.footnotes {
+  background-color: var(--footnotes-box);
+  padding-bottom: 5px;
+}
+.footnotes hr {
+  opacity: 10%;
+}
+.footnote-ref {
+  text-decoration: none;
 }
 
 .notesitem {

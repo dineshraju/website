@@ -16,11 +16,11 @@ const NotesPage = ({ data }) => {
     <h2>Notes</h2>
     {
       nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).map(n => (
-        <div class="notesitem">
-          <Link class="noteslink" to={`/notes/${n.slug}`}>
+        <div key={n.slug} className="notesitem">
+          <Link className="noteslink" to={`/notes/${n.slug}`}>
             { n.title }
           </Link>
-          <div class="notesdate">
+          <div className="notesdate">
             { n.publishedStr }
           </div>
         </div>
