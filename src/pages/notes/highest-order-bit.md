@@ -25,17 +25,17 @@ The value of flipping the highest-order bit to *1* outweighs the value of flippi
 
 ### Bits in the real world
 
-There are two forms that high order bits can take in the real world: *sequence bits* and *outcome bits*
+There are two forms that high order bits can take in the real world: *fungible bits* and *non-fungible bits*
 
-***Sequence bits*** set out the hierarchy of how different events cause a winning outcome. Higher-order events need to happen first before lower-order events can happen.
-
-- If a company runs out of money, it doesn’t matter if there are no office politics. If its product doesn’t solve a customer problem, it doesn’t matter if the website is elegantly designed. Cashflow and product-market fit are higher-order bits [to company culture](https://pmarcasays.golaun.ch/2014/02/25/high-functioning-business-organizations-are-not-disneyland/) and product polish.
-- If a country has rampant crime and violence from street gangs, it doesn’t matter how its elected leaders  lean politically, they will be voted out. Basic citizen safety is a higher-order bit to political ideology.
-
-***Outcome bits*** express the relative contribution of different events to the size of an outcome. Higher-order events dwarf lower-order events in dictating how much a person or company wins.
+***Fungible bits*** describe how different events contribute to the size of a winning outcome. The value added by each event is qualitatively the same and fungible. But there’s a power law distribution where higher-order events dwarf lower-order events in how much they contribute to the size of the win.
 
 - Warren Buffet has owned 400 to 500 stocks during his life. He’s made the majority of his money on 10 of them. If you remove just a few of Berkshire’s top investments, its long-term track record [is pretty average](https://collabfund.com/blog/tails-you-win/)
 - Less than 5% of the shows Disney has made account for [over 40% of its international box office revenue](https://www.the-numbers.com/box-office-records/worldwide/all-movies/theatrical-distributors/walt-disney).
+
+***Non-fungible bits*** set out the hierarchy of the different events responsible for a winning outcome. The contribution of each event is qualitatively different and higher-order events must happen first before lower-order events can happen.
+
+- If a company runs out of money, it doesn’t matter if there are no office politics. If its product doesn’t solve a customer problem, it doesn’t matter if the website is elegantly designed. Cashflow and product-market fit are higher-order bits [to company culture](https://pmarcasays.golaun.ch/2014/02/25/high-functioning-business-organizations-are-not-disneyland/) and product polish.
+- If a country has rampant crime and violence from street gangs, it doesn’t matter how its elected leaders  lean politically, they will be voted out. Basic citizen safety is a higher-order bit to political ideology.
 
 The idea here is not just that some events are more important than others to get to a winning outcome. The point is that higher-order events so dominate an outcome that lower-order events are irrelevant and can even be a distraction. If the highest-order bit isn’t identified and flipped, you can’t make up for it by flipping every other bit.
 
@@ -51,9 +51,9 @@ There might even be a higher-order bit that’s just not possible to see, even b
 
 ### You can’t influence the highest-order bit
 
-Some highest-order *sequence bits* can be governed by macro factors out of your control. Flipping it might be out of your hands. Or it might already be flipped and gets unflipped from under you by larger forces. The highest-order bit for your company to build out its popular new product prototype might be more funding. But changing central bank monetary policy makes borrowing much more expensive. The fundraising pitch that worked a year ago no longer works. You need to find another way.
+Some highest-order *non-fungible bits* can be governed by macro factors out of your control. Flipping it might be out of your hands. Or it might already be flipped and gets unflipped from under you by larger forces. The highest-order bit for your company to build out its popular new product prototype might be more funding. But changing central bank monetary policy makes borrowing much more expensive. The fundraising pitch that worked a year ago no longer works. You need to find another way.
 
-Flipping highest-order *outcome bits* is often probabilistic. You can’t control the external factors which are pre-requisites for black swan-type traction or contagion. Warren Buffet might have made most of his money on a handful of the 400 stocks he bought. But he couldn’t predict with certainty which of the 400 would turn out to be the most valuable bits.
+Flipping highest-order *fungible bits* is often probabilistic. You can’t control the external factors which are pre-requisites for black swan-type traction or contagion. Warren Buffet might have made most of his money on a handful of the 400 stocks he bought. But he couldn’t predict with certainty which of the 400 would turn out to be the most valuable bits.
 
 To win, you need to keep trying until external factors line up with what you’re doing to flip the highest-order bit.
 
