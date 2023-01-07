@@ -1,7 +1,7 @@
 ---
 slug: "writing-notes"
 published: "2022-12-29"
-updated: "2022-12-30"
+updated: "2023-01-07"
 ---
 
 ## Writing Notes
@@ -24,7 +24,7 @@ Once a new Gatsby project was set up, I pushed it to this [Github repository](ht
 
 ### The publishing process
 Creating a new post is pretty straightforward:
-1. Use [Bear](https://bear.app/) to draft and edit the post
+1. Use ~~[Bear](https://bear.app/)~~ [Notion](https://www.notion.so/) to draft and edit the post
 2. Copy the final text into a new Markdown file and push it to the repository
 3. Wait for Fleek to re-publish the site and get the IPFS hash
 4. Pin the IPFS hash using [Infura](https://www.infura.io/)
