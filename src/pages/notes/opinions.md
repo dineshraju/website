@@ -1,7 +1,7 @@
 ---
 slug: "opinions"
 published: "2023-05-06"
-updated: "2023-05-06"
+updated: "2023-05-18"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"
 ---
 
@@ -9,7 +9,7 @@ thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"
 
 Quite a number of articles, interviews and books are shared in group chats and forums I’m part of. This non-fictional content can range from business best practices to macroeconomics to geopolitics. Typically, the person sharing the piece of content used it to form an opinion about the world, and wants to share that opinion and its justification with the group. This opinion sharing is sometimes just phatic or for peer social support. But a lot of the time the opinions are presented as models of the world that should be adopted because they are more useful than the status quo.
 
-I try to be deliberate about how I form a new opinion since being rigorous with my opinions will improve the communities I’m a member of. If we’re precise about how we think and what we mean, [other thoughtful people validate our choices as good ones](https://www.visakanv.com/blog/language/). Words matter. What we say matters. [How rigorous we are matters](https://visakanv.substack.com/p/are-you-serious).
+I try to be deliberate about how I form a new opinion since being rigorous with my opinions will improve the communities I’m a member of. If we’re precise about how we think and what we mean, [we enrich the communal pool of language and meaning](/notes/words-always-compile/). Words matter. What we say matters. [How rigorous we are matters](https://visakanv.substack.com/p/are-you-serious).
 
 So I’m often explaining why I don’t form the same opinion someone else does from reading an article and why I recommend disregarding the source material since it isn’t robust.
 
