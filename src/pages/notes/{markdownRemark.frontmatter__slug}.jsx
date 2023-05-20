@@ -142,6 +142,7 @@ export const pageQuery = graphql`
         transcript
         thanks
         slug
+        ogimage
       }
     }
   }
@@ -152,6 +153,7 @@ export const Head = ({ data }) => {
     <>
       <title>{ data.markdownRemark.htmlAst.children[0].children[0].value }</title>
       <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafkreicwsb5wa74xkn4hcy6rlvgct732jjydbl7rfeeav4jx5hfidklixa') } />
+      <meta property='og:image' content= { expandIPFS(data.markdownRemark.frontmatter.ogimage || 'bafkreifbc5wnjsmcjoqg7ado3eaekv46kmis2rbuu6rzjiosxgtun3vqt4') } />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LVX0CBPY" />
       <Script>
         {`

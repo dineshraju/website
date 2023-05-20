@@ -1,7 +1,7 @@
 ---
 slug: "highest-order-bit"
 published: "2023-01-07"
-updated: "2023-01-07"
+updated: "2023-05-28"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"
 ---
 
@@ -65,7 +65,7 @@ Maybe there isn’t enough capital, or maybe you  don’t yet have the skills ne
 
 To unlock resources or abilities, you might even need to unflip some lower-order bits and throw away the goodwill and work done to flip them.
 
-You find midway through your career that you’re in the wrong profession. Another occupation is what truly makes you happy. No matter which bits you flip in your current position, your highest-order bit for self-actualization lies somewhere else. You need to regress and leave your current job first before you’re able to start from scratch on the new career path. It’s what flipping your own personal highest-order bit demands.
+You find midway through your career that you’re in the wrong profession. Another occupation is what truly makes you happy. No matter which bits you flip in your current position, your highest-order bit for [self-actualization lies somewhere else](/notes/what-to-know/). You need to regress and leave your current job first before you’re able to start from scratch on the new career path. It’s what flipping your own personal highest-order bit demands.
 
 ### The tyranny of the highest-order bit
 
