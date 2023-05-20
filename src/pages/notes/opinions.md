@@ -1,7 +1,7 @@
 ---
 slug: "opinions"
 published: "2023-05-06"
-updated: "2023-05-18"
+updated: "2023-05-28"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"
 ---
 
@@ -13,7 +13,7 @@ I try to be deliberate about how I form a new opinion since being rigorous with 
 
 So I’m often explaining why I don’t form the same opinion someone else does from reading an article and why I recommend disregarding the source material since it isn’t robust.
 
-It’s not that I think the viewpoints presented are necessarily wrong. It’s just that I’d rather have no opinion about a topic than fool myself with one that sounds “[truthy](https://en.wikipedia.org/wiki/Truthiness)” or because it confirms my priors. There’s a lot of content out there so I can always wait for material that’s more carefully reasoned before I form an opinion, even if that takes awhile. I don’t need to have an opinion about everything anyway. It’s enough to have a few key rigorously-formed opinions about my [highest-order bits](/notes/highest-order-bit/).
+It’s not that I think the viewpoints presented are necessarily wrong. It’s just that I’d rather have no opinion about a topic than fool myself with one that sounds “[truthy](https://en.wikipedia.org/wiki/Truthiness)” or because it confirms my priors. There’s a lot of content out there so I can always wait for material that’s more carefully reasoned before I form an opinion, even if that takes awhile. I don’t need to have an opinion about everything anyway. It’s enough to have a few key rigorously-formed opinions about [what I need to know](/notes/what-to-know/).
 
 > “The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.” — Daniel Boorstin
 
