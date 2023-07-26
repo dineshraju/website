@@ -1,13 +1,13 @@
 ---
 slug: "socials"
 published: "2022-12-30"
-updated: "2023-05-04"
+updated: "2023-07-26"
 ---
 
 ## Socials
-- Blog: dineshraju.eth/notes ([eth.limo](https://dineshraju.eth.limo/notes/), [eth.link](https://dineshraju.eth.link/notes/))
-- Farcaster: [@dineshraju](https://warpcast.com/dineshraju)
+- Blog: [dineshraju.eth/notes](https://dineshraju.eth.limo/notes/)
 - Twitter: [@dineshraju](https://twitter.com/dineshraju)
+- Farcaster: [@dineshraju.eth](https://warpcast.com/dineshraju.eth)
 - Bluesky: [@dineshraju.com](https://staging.bsky.app/profile/dineshraju.com)
 - Mastodon: [@dineshraju](https://mastodon.social/@dineshraju)
 - ENS: dineshraju.eth
