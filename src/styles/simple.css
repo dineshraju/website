@@ -13,6 +13,7 @@
   --text-light: #585858;
   --border: #898EA4;
   --accent: #0d47a1;
+  --links: #0d47a1;
   --code: #d81b60;
   --preformatted: #444;
   --marked: #ffdd33;
@@ -30,6 +31,7 @@
     --text: #dcdcdc;
     --text-light: #ababab;
     --accent: #ffb300;
+    --links: #e6cf98;
     --code: #f06292;
     --preformatted: #ccc;
     --disabled: #111;
@@ -180,11 +182,12 @@ h3 {
 /* Format links & buttons */
 a,
 a:visited {
-  color: var(--accent);
+  color: var(--links);
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline
 }
 
 button,
@@ -535,7 +538,7 @@ hr {
   100% { background: none; }
 }
 .highlight {
-  animation: flash 2s;
+  animation: flash 3s;
 }
 
 .footerthanks {
@@ -578,6 +581,46 @@ hr {
 }
 .notesdate {
   font-size: 0.8rem;
+}
+
+@keyframes bookfade {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+.bookfadein {
+  animation: bookfade 4s;
+}
+.bookheader {
+  font-size: 0.9rem;
+}
+.bookrow {
+  margin-top: 2.5rem;
+}
+.bookchaptertitle {
+  font-size: 1.7rem;
+  margin-bottom: 0.7rem;
+}
+.bookquoterow {
+  width: auto;
+  display: table-row;
+}
+.bookquote {
+  float: left;
+  display: table-column;
+  width: 90%;
+}
+.bookanchor {
+  opacity: 80%;
+  float: left;
+  display: table-column;
+  padding-right: 1.5rem;
+  margin-top: 1.3rem;
+  font-size: 0.8rem;
+  opacity: 50%;
+  text-decoration: none;
+}
+.bookquotehidden {
+  display: none
 }
 
 .transcriptheader {
@@ -628,7 +671,7 @@ video {
   max-width: 100%;
   height: auto;
   margin-top: 20px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   border-radius: 5px;
 }
 
