@@ -8,6 +8,8 @@ const NotesPage = ({ data }) => {
     slug: n.frontmatter.slug,
     title: n.htmlAst.children[0].children[0].value,
     transcript: n.frontmatter.transcript,
+    book: n.frontmatter.book,
+    author: n.frontmatter.author,
     publishedStr: n.frontmatter.publishedStr,
     published: n.frontmatter.published
   }))
@@ -16,12 +18,12 @@ const NotesPage = ({ data }) => {
     <div>
     <h2>Notes</h2>
     {
-      nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).map(n => (
+      nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).filter(n => !n.book || process.env.GATSBY_DEV).map(n => (
         <div key={n.slug} className="notesitem">
           <Link className="noteslink" to={`/notes/${n.slug}`}>
-            { n.title }
+            { n.book ? `${n.book}` : n.title }
           </Link>
-          { n.transcript ? ' (transcript)' : '' }
+          { n.transcript ? ' (transcript)' : n.book ? ' (quotes)' : '' }
           <div className="notesdate">
             { n.publishedStr }
           </div>
@@ -41,6 +43,8 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         transcript
+        book
+        author
         published(formatString: "YYYYMMDD")
         publishedStr: published(formatString: "Do MMM, YYYY")
       }
