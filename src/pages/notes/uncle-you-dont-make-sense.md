@@ -13,7 +13,7 @@ I think I finally understand why he did it. Actually, I feel a little sorry for 
 
 ### Natural-born storyteller
 
-I’ve seen pictures of my uncle when he was 3 years old at my grandma’s house. I imagine the world around him those days was very straightforward. It all made sense. He didn’t have to deal with abstract concepts like geopolitics or interest rates. My uncle used what he saw around him to build a coherent and intuitive picture of the world. He needed this [associative coherence](https://www.nature.com/articles/s41599-020-00577-w) since it was the stable interface to the [dizzyingly rich sensory world](https://www.scientificamerican.com/article/looks-can-deceive/) he found himself in.
+I’ve seen pictures of my uncle when he was 3 years old at my grandma’s house. I imagine the world around him those days was very straightforward. It all made sense. He didn’t have to deal with abstract concepts like geopolitics or interest rates. My uncle used what he saw around him to build a coherent and intuitive picture of the world. He needed this [associative coherence](/notes/thinking-fast-and-slow/#the-events-that) since it was the stable interface to the [dizzyingly rich sensory world](https://www.scientificamerican.com/article/looks-can-deceive/) he found himself in.
 
 As a kid, the few pesky details in reality that he couldn’t see didn’t really matter. He could just make up a story about the missing bits and navigate life based on what he did see. One time his sister got Chickenpox and he thought the red spots were bite marks from [a spirit](https://en.wikipedia.org/wiki/Kuntilanak) that was angry with her. His mom played along and told him to stay far away from any kid who also got bitten. He listened to her though, and so never got Chickenpox as a child.
 
@@ -21,7 +21,7 @@ It’s worth noting that none of this was done consciously. My uncle wasn’t co
 
 ### What he sees is all there is
 
-As a child, my uncle could be excused for assuming that [what he sees is all there is](https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow). Back then, his mind made use of his eyes in a straightforward way. It’s like he was born with a camera that gave him a personal, context-rich feed of the world. Sure, his camera was a little wonky and might have been fabricating some of the details. But those bits didn’t really have any bearing on him anyway. He trusted his camera enough to get him through the day. Trying to second-guess what his camera was telling him all the time was exhausting and hardly ever worth the effort.
+As a child, my uncle could be excused for assuming that [what he sees is all there is](/notes/thinking-fast-and-slow/#what-you-see). Back then, his mind made use of his eyes in a straightforward way. It’s like he was born with a camera that gave him a personal, context-rich feed of the world. Sure, his camera was a little wonky and might have been fabricating some of the details. But those bits didn’t really have any bearing on him anyway. He trusted his camera enough to get him through the day. Trying to second-guess what his camera was telling him all the time was exhausting and hardly ever worth the effort.
 
 The way my uncle operates his camera is radically different these days. The camera is no longer tethered to what he experiences in person and must function in a much bigger world. In this expanded reality, there are many more essential details that he [needs to know](/notes/what-to-know/), but he’ll never get a chance to experience in person. Getting the [most important bits](/notes/highest-order-bit/) wrong can lead to a life of unrealized potential or worse.
 
@@ -45,7 +45,7 @@ If the feed coming to him is about a topic that he has personal experience with,
 
 In fact, the less he knows about the topic and the more degraded the transmission, the more confident he’s going to be that he’s understanding it correctly.
 
-The confidence he feels isn’t determined by the accuracy of what he knows, but by the [coherence and ease of the story](https://www.goodreads.com/quotes/1132839-confidence-is-a-feeling-which-reflects-the-coherence-of-the) that’s constructed from what’s available. It’s unsurprising that the confidence he feels measures coherence rather than accuracy or “truth” about a subject. There’s no way for any of us to be sure that there is a “truth”. The closest we can get is [civilization-wide coherence](https://en.wikipedia.org/wiki/Coherence_theory_of_truth) about what we experience. The “truth” is a useful [explanation](https://en.wikipedia.org/wiki/David_Deutsch#Invariants) that we all agree on.
+The confidence he feels isn’t determined by the accuracy of what he knows, but by the [coherence and ease of the story](/notes/thinking-fast-and-slow/#subjective-confidence-in) that’s constructed from what’s available. It’s unsurprising that the confidence he feels measures coherence rather than accuracy or “truth” about a subject. There’s no way for any of us to be sure that there is a “truth”. The closest we can get is [civilization-wide coherence](https://en.wikipedia.org/wiki/Coherence_theory_of_truth) about what we experience. The “truth” is a useful [explanation](https://en.wikipedia.org/wiki/David_Deutsch#Invariants) that we all agree on.
 
 ![](ipfs://bafybeibmb5mgiukryqubu2pho6wd2si6j7tf7mquk4w4zbom7anwmgyory)
 
@@ -57,7 +57,7 @@ His camera first [latches onto an initial story](https://en.wikipedia.org/wiki/A
 
 ![](ipfs://bafybeics5n4d4aifsckdydd56zeisewqjwcpbguuv3oyoyayre5zzv5jvi)
 
-So having fewer details available in the imported feed makes it *easier* to fit the details he can see into a coherent, compelling story that breeds confidence. It gets even more compelling if all his buddies around him are convinced of the story as well. In a perverse way, having less context makes it *easier* for him to get fooled into thinking he really understands what’s going on.
+So having fewer details available in the imported feed [makes it *easier*](/notes/thinking-fast-and-slow/#paradoxically-it-is) to fit the details he can see into a coherent, compelling story that breeds confidence. It gets even more compelling if all his buddies around him are convinced of the story as well. In a perverse way, having less context makes it *easier* for him to get fooled into thinking he really understands what’s going on.
 
 Through all this he’s exposed to a perfect storm. In our hyper-connected world, events that happen far away can have a big impact on his life, so he needs to understand them well. He learns about these faraway matters from remote camera operators who send him lossy transmissions. His wonky camera fills in the missing details by making up a story that’s coherent with the few bits that can be seen. The story is convincing, so he’s very sure he understands what’s going on. His confidence prompts him to share his insight with others and ignore those who think he’s wrong. He acts decisively on these beliefs only to find that something has gone awry and his instincts have failed him. My uncle doesn’t stand a chance.
 
