@@ -1,7 +1,7 @@
 ---
 slug: "uncle-you-dont-make-sense"
 published: "2023-07-25"
-updated: "2023-07-25"
+updated: "2023-10-22"
 thanks: "Cedric@https://twitter.com/ejames_c, Visa@https://twitter.com/visakanv"
 ---
 
@@ -33,11 +33,11 @@ Here’s where my uncle gets in trouble. He’s still using the same janky old c
 
 ### Transmissions are lossy
 
-I was tempted that night to lecture my uncle about how vaccines clearly save lives. I had looked at the research and I was convinced. To send him something from my own camera, I would use words to create a transmission. This note you’re reading is a transmission of what I see on my personal feed, encoded in words. But keep in mind that words are leaky abstractions. What I write and say can only be an approximation of all the detail I’m trying to convey. There will always be gaps between what I mean and what can be captured in the words I use. Any set of words I choose will chop away some different bit of reality.
+I was tempted that night to lecture my uncle about how vaccines clearly save lives. I had looked at the research and I was convinced. To send him something from my own camera, I would use words to create a transmission. This note you’re reading is a transmission of what I see on my personal feed, encoded in words. But keep in mind that words are leaky abstractions. What I write and say can only be an approximation of all the detail I’m trying to convey. There will [always be gaps](/notes/mind-the-gaps/) between what I mean and what can be captured in the words I use. Any set of words I choose will chop away some different bit of reality.
 
 ![](ipfs://bafybeigdw4oi56p27qm6xnol5paj4x7riymhvdwenktbbwsgz3exdvydsm)
 
-This gets tricky when my uncle inadvertently fills in the gaps to [make the words compile](/notes/words-always-compile/). When he receives my stream of words, he’s going to autocomplete the missing context to come away inferring *something*. It can feel like this *something* was absolutely what I was trying to say, even if it wasn’t. There’s no error message that pops up and tells him to stop trying to form an opinion since too much context was dropped in the degraded transmission.
+This gets tricky when my uncle inadvertently [fills in the gaps](/notes/mind-the-gaps/) to autocomplete the words. When he receives my stream of words, he’s going to autocomplete the missing context to come away inferring *something*. It can feel like this *something* was absolutely what I was trying to say, even if it wasn’t. There’s no error message that pops up and tells him to stop trying to form an opinion since too much context was dropped in the degraded transmission.
 
 If the feed coming to him is about a topic that he has personal experience with, he might interpolate the gaps correctly enough for the transmission to be useful. But if this is something new for him, the stories he’s making up about the details he doesn’t see might meaningfully distort what I was trying to say.
 
@@ -53,7 +53,7 @@ A coherent explanation is indeed a decent proxy for truth in my uncle’s person
 
 When feeds get imported from other operators though, he can get in trouble. The lossiness of external feeds gives his camera many degrees of freedom to craft different persuasive stories. The more degraded the feed, the greater the number of possible stories.
 
-His camera first [latches onto an initial story](https://en.wikipedia.org/wiki/Anchoring_(cognitive_bias)) that’s sufficiently cogent and easy for him to make sense of. Once it finds a good candidate, it works to expand its scope, [hiding details and invalidating perspectives](https://en.wikipedia.org/wiki/Confirmation_bias) that would disrupt his coherence. If there are gaps left over, the camera projects his own abilities and experience of the world into them. There’s now a complete picture on the screen that makes sense. Remember that his camera isn’t trying to show him what is “true”. It’s just trying to show him a picture that’s maximally coherent. If necessary, it will sacrifice the “truth” to build this picture for him. Anything that challenges coherence will feel misguided and suspicious, and his mind will defer to what the screen builds for him. All of this happens without him realizing it.
+His camera first [latches onto an initial story](https://en.wikipedia.org/wiki/Anchoring_(cognitive_bias)) that’s sufficiently cogent and easy for him to make sense of. Once it finds a good candidate, it works to expand its scope, [hiding details and invalidating perspectives](https://en.wikipedia.org/wiki/Confirmation_bias) that would disrupt his coherence. For the gaps that are left, the camera projects his own abilities and experience of the world into them. There’s now a complete picture on the screen that makes sense. Remember that his camera isn’t trying to show him what is “true”. It’s just trying to show him a picture that’s maximally coherent. If necessary, it will sacrifice the “truth” to build this picture for him. Anything that challenges coherence will feel misguided and suspicious, and his mind will defer to what the screen builds for him. All of this happens without him realizing it.
 
 ![](ipfs://bafybeics5n4d4aifsckdydd56zeisewqjwcpbguuv3oyoyayre5zzv5jvi)
 
