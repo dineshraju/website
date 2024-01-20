@@ -53,7 +53,7 @@ export const pageQuery = graphql`
 }
 `
 
-const expandIPFS = hash => `https://${hash}.ipfs.cf-ipfs.com`
+const expandIPFS = hash => `https://ipfs.dineshraju.xyz/${hash}`
 
 export const Head = () => {
   return (
