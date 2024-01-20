@@ -166,7 +166,7 @@ const TranscriptTemplate = (frontmatter, html) => {
   )
 }
 
-const expandIPFS = hash => `https://cloudflare-ipfs.com/ipfs/${hash}`
+const expandIPFS = hash => `https://ipfs.dineshraju.xyz/${hash}`
 
 const BlogPostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
