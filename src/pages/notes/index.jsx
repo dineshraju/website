@@ -59,7 +59,7 @@ export const Head = () => {
   return (
     <>
       <title>Notes</title>
-      <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafkreicwsb5wa74xkn4hcy6rlvgct732jjydbl7rfeeav4jx5hfidklixa') } />
+      <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafybeify2jkbx7hyqqb6siu4sn2xhtoroj7f7zjuseub6hmvhj3yfovojm') } />
     </>
   )
 }
