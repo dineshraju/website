@@ -224,9 +224,9 @@ export const Head = ({ data }) => {
   return (
     <>
       <title>{ data.markdownRemark.frontmatter.book || data.markdownRemark.htmlAst.children[0].children[0].value }</title>
-      <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafkreicwsb5wa74xkn4hcy6rlvgct732jjydbl7rfeeav4jx5hfidklixa') } />
+      <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafybeify2jkbx7hyqqb6siu4sn2xhtoroj7f7zjuseub6hmvhj3yfovojm') } />
       <link rel='canonical' href={ `${config.siteMetadata.siteUrl}notes/${data.markdownRemark.frontmatter.slug}/` } />
-      <meta property='og:image' content= { expandIPFS(data.markdownRemark.frontmatter.ogimage || 'bafkreifbc5wnjsmcjoqg7ado3eaekv46kmis2rbuu6rzjiosxgtun3vqt4') } />
+      <meta property='og:image' content= { expandIPFS(data.markdownRemark.frontmatter.ogimage || 'bafybeieg2hv4pfvkccj6axnaqzhv3ue3jsifx4ws4zfw6ld3d4i7r37x2y') } />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LVX0CBPY" />
       <Script>
         {`
