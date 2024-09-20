@@ -1,7 +1,7 @@
 ---
 slug: "writing-notes"
 published: "2022-12-29"
-updated: "2023-01-07"
+updated: "2024-09-20"
 ---
 
 ## Writing Notes
@@ -24,11 +24,11 @@ Once a new Gatsby project was set up, I pushed it to this [Github repository](ht
 
 ### The publishing process
 Creating a new post is pretty straightforward:
-1. Use ~~[Bear](https://bear.app/)~~ [Notion](https://www.notion.so/) to draft and edit the post
+1. Use ~~[Bear](https://bear.app/)~~ ~~[Notion](https://www.notion.so/)~~ [Anytype](https://anytype.io/) to draft and edit the post
 2. Copy the final text into a new Markdown file and push it to the repository
 3. Wait for Fleek to re-publish the site and get the IPFS hash
-4. Pin the IPFS hash using [Infura](https://www.infura.io/)
-5. Add the IPFS record to ENS to be served up via [eth.limo](https://eth.limo/)
+4. Pin the IPFS hash using ~~[Infura](https://www.infura.io/)~~ [Pinata](https://pinata.cloud/)
+5. Add the IPFS record to ENS to be served up via [eth.link](https://eth.link/)
 
 Steps 2 to 5 are fairly quick and can be automated if needed. If an individual app or service is taken down, it's easy to find a replacement since there's no reliance on proprietary formats.
 
