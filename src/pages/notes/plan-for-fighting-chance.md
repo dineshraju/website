@@ -1,7 +1,7 @@
 ---
 slug: "plan-for-fighting-chance"
 published: "2024-04-19"
-updated: "2024-04-19"
+updated: "2024-10-13"
 thanks: ""
 ---
 
@@ -16,7 +16,7 @@ The social validation, money & support from grant programs encourage recipients 
 
 It's more critical to first [dig into the nitty gritty details](https://twitter.com/dineshraju/status/1661318128452898819) of the outlier's assumptions about the world and themselves. Fighting Chance will include:
 1. A library of posts about [the outlier's headset](/notes/headsets/), the nuances of attention, [edge-domain fit](/notes/what-to-know/) & other topics to get the outlier unmuddled
-2. One-on-one [mirror sessions](https://twitter.com/dineshraju/status/1403213751138996233) that let an outlier see an image of themself at a slightly different angle, one that they hadn't seen before
+2. One-on-one [mirror sessions](/notes/mirror-session) that let an outlier see an image of themself at a slightly different angle, one that they hadn't seen before
 3. Connecting the outlier to a [broader network](https://twitter.com/visakanv/status/1520302822637539329) of others
 
 
