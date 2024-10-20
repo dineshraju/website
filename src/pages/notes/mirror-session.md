@@ -1,7 +1,7 @@
 ---
 slug: "mirror-session"
 published: "2024-10-13"
-updated: "2024-10-13"
+updated: "2024-10-20"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"
 ---
 
@@ -15,9 +15,9 @@ Getting the explorer to examine what they understand from fresh perspectives is 
 
 This process of discovery can get uncomfortable. If a set of dots have always been the center of focus and used to navigate the world all this time, they will be the most familiar and assuring. Adjusting the focus to reveal new details that were previously hidden can be unsettling, since these new bits might challenge the validity of the explorer's existing map and worldview. The explorer must be willing to persist through any resulting anxiety and disorientation for the session to be useful.
 
-Also, the goal of a mirror session isn't to prescribe specific solutions to issues the explorer is facing. Any effective and enduring solution requires a thorough understanding of the problem's context and only the explorer can unlock full access to their own context. Mirror sessions are simply an exercise to sanity check the explorer's map and to make sure steering controls are calibrated correctly.
+Also, the goal of a mirror session isn't to prescribe specific solutions to issues the explorer is facing. Any effective and enduring solution requires a thorough understanding of the problem's context, and only the explorer can unlock full access to their own context. A mirror session is simply a conversation designed to seek precision about the models the explorer uses to understand the world.
 
-For mirror sessions to work, the explorer's partner in the chat should be someone who's genuinely curious and compassionate. If discrepancies appear in the explorer's explanations about the world, the chat partner must want to fill those gaps and figure out why they are there, without judgement.
+As the explorer's models are made more detailed during the session, they are scrutinized from a fresh external perspective, i.e. that of the chat partner. For a mirror session to work, the explorer's partner in the conversation should be someone who's genuinely curious and compassionate. If discrepancies appear in the explorer's explanations about the world, the chat partner must want to fill those gaps and figure out why they are there, without judgement.
 
 While listening to the explorer, the partner might also be tempted to interject and place themselves into the conversation. Extra care should be taken to avoid [inadvertently autocompleting gaps](/notes/mind-the-gaps/#like-luke-yoda) using the partner's personal experiences from a different context.
 
@@ -42,11 +42,11 @@ The chat partner starts from the pre-session reading material and asks a series 
 
 ![](ipfs://bafkreibvkzddi73i5aplgy367b3be32zebzi5cxdd3h7izlayopch5v7c4)
 
-3. **Reconcile mismatch of assumptions**: Follow-up questions are asked to probe whether these assumptions are consistent with the rest of the explorer's worldview. They are also tested against the chat partner's own mental models. If there's a mismatch, the conversation examines the part of the model that doesn't quite fit. Related details are made precise to see if other hidden assumption are causing the dissonance.
+3. **Reconcile mismatch of assumptions**: Follow-up questions are asked to probe whether these assumptions are consistent with the rest of the explorer's worldview. They are also contextualized and tested against the chat partner's own mental models. If there's a mismatch, the conversation examines the part of the model that doesn't quite fit. Related details are made precise and thought experiments are run to see if other hidden assumption are causing the dissonance.
 
 ![](ipfs://bafkreibpt7uchzdaz3zeroauak3cxzgrackmnyv6vaenwdqruwromcq5ba)
 
-This sequence repeats throughout the session to give the explorer a new perspective on the models they use to achieve goals.
+This sequence repeats throughout the session to give the explorer a new perspective on the models they use to achieve goals. The session closes with concrete next steps, that build on this fresh perspective, for the explorer to try out. Watch a [live demo of a mirror session here](https://www.youtube.com/watch?v=X7lWUsrnKQw).
 
 <br />
 
