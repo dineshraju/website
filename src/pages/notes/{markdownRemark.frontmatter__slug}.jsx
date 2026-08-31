@@ -45,6 +45,7 @@ const RegularTemplate = (frontmatter, html) => {
   return (
     <div>
       <div
+        className="regularcontent"
         dangerouslySetInnerHTML={{ __html: processedHtml }}
       />
       { renderThanks() }
@@ -61,7 +62,7 @@ const BookTemplate = (frontmatter, htmlAst, hideWithCss) => {
 
   return (
     <div>
-      <h2 id="booktitle" className="bookfadein">{frontmatter.book}</h2>
+      <h2 id="booktitle">{frontmatter.book}</h2>
       <div className="bookheader">
         { "(Quotes from a " }
         <a href={frontmatter.url} target="_blank">book by {frontmatter.author}</a>
@@ -75,7 +76,7 @@ const BookTemplate = (frontmatter, htmlAst, hideWithCss) => {
 
             return (
               <div key={`q${qidx}`} id={anc} className={`bookquoterow${hiddenClass}`}>
-                <Link to={ `#${anc}`} className="bookanchor">#</Link>
+                <a href={ `#${anc}`} className="bookanchor">#</a>
                 <div className="bookquote">
                   {quote.blocks.map((block, qbidx) => (
                     <MarkdownAst
@@ -145,7 +146,7 @@ const TranscriptTemplate = (frontmatter, htmlAst) => {
             <div key={anchorLink} className={`transcriptrow`}>
               <div className="transcripttime">
                 <a href={timeToLink(...time)} target="_blank">{timeToStr(...time)}</a>
-                <Link to={ `#${anchorLink}`} className="transcriptanchor">(#)</Link>
+                <a href={ `#${anchorLink}`} className="transcriptanchor">(#)</a>
               </div>
               <div id={anchorLink} className={`transcriptquote`}>
                 {segment.blocks.map((block, idx) => (
@@ -181,27 +182,6 @@ const BlogPostTemplate = ({ data }) => {
   const processedHtmlAst = mapAstStrings(htmlAst, expandIPFSReferences)
   const preview = Boolean(process.env.GATSBY_DEV)
   const hideWithCss = shouldHideWithCss(frontmatter, preview)
-
-  React.useEffect(() => {
-    const urlHash = typeof window !== 'undefined' ? window.location.hash.substr(1) : null
-    if (urlHash) {
-      const elem = window.document.getElementById(urlHash)
-      if (frontmatter.type === NOTE_TYPES.BOOK_QUOTES) {
-        if (elem && hideWithCss) {
-          elem.parentElement.parentElement.classList.remove('bookquotehidden')
-          elem.classList.remove('bookquotehidden')
-          Array.from(window.document.getElementsByClassName('bookrow bookquotehidden')).forEach(e => e.remove())
-          Array.from(window.document.getElementsByClassName('bookquoterow bookquotehidden')).forEach(e => e.remove())
-        }
-      } else {
-        if (elem) { elem.classList.add('highlight') }
-      }
-    }
-    if (frontmatter.type === NOTE_TYPES.BOOK_QUOTES) {
-      const elem = window.document.getElementById('booktitle')
-      if (elem) { elem.classList.remove('bookfadein') }
-    }
-  })
 
   switch (frontmatter.type) {
     case NOTE_TYPES.TRANSCRIPT:

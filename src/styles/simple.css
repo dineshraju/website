@@ -537,7 +537,9 @@ hr {
   50% { background: var(--flash); }
   100% { background: none; }
 }
-.highlight {
+.regularcontent :target,
+.transcriptquote:target,
+.transcriptquote :target {
   animation: flash 3s;
 }
 
@@ -583,13 +585,6 @@ hr {
   font-size: 0.8rem;
 }
 
-@keyframes bookfade {
-  0% { opacity: 0.7; }
-  100% { opacity: 1; }
-}
-.bookfadein {
-  animation: bookfade 4s;
-}
 .bookheader {
   font-size: 0.9rem;
 }
@@ -620,7 +615,13 @@ hr {
   text-decoration: none;
 }
 .bookquotehidden {
-  display: none
+  display: none;
+}
+.bookrow.bookquotehidden:has(.bookquoterow:target) {
+  display: block;
+}
+.bookquoterow.bookquotehidden:target {
+  display: table-row;
 }
 
 .transcriptheader {
