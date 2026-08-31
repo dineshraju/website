@@ -1,29 +1,31 @@
 import * as React from "react"
 import { Link, graphql } from 'gatsby'
 import "../../styles/simple.css"
+import { NOTE_TYPES, shouldListNote } from '../../lib/note-policy'
 
 const NotesPage = ({ data }) => {
 
   const nodes = data.allMarkdownRemark.nodes.filter(n => n.fileAbsolutePath.match('/pages/notes/')).map(n => ({
     slug: n.frontmatter.slug,
     title: n.htmlAst.children[0].children[0].value,
-    transcript: n.frontmatter.transcript,
+    type: n.frontmatter.type,
+    listed: n.frontmatter.listed,
     book: n.frontmatter.book,
-    author: n.frontmatter.author,
     publishedStr: n.frontmatter.publishedStr,
     published: n.frontmatter.published
   }))
+  const preview = Boolean(process.env.GATSBY_DEV)
 
   return (
     <div>
     <h2>Notes</h2>
     {
-      nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).filter(n => !n.book || process.env.GATSBY_DEV).map(n => (
+      nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).filter(n => shouldListNote(n, preview)).map(n => (
         <div key={n.slug} className="notesitem">
           <Link className="noteslink" to={`/notes/${n.slug}`}>
-            { n.book ? `${n.book}` : n.title }
+            { n.type === NOTE_TYPES.BOOK_QUOTES ? n.book : n.title }
           </Link>
-          { n.transcript ? ' (transcript)' : n.book ? ' (quotes)' : '' }
+          { n.type === NOTE_TYPES.TRANSCRIPT ? ' (transcript)' : n.type === NOTE_TYPES.BOOK_QUOTES ? ' (quotes)' : '' }
           <div className="notesdate">
             { n.publishedStr }
           </div>
@@ -42,9 +44,9 @@ export const pageQuery = graphql`
       htmlAst
       frontmatter {
         slug
-        transcript
+        type
+        listed
         book
-        author
         published(formatString: "YYYYMMDD")
         publishedStr: published(formatString: "Do MMM, YYYY")
       }

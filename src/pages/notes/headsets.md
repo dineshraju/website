@@ -1,5 +1,8 @@
 ---
 slug: "headsets"
+type: "note"
+listed: true
+display: "full"
 published: "2024-04-14"
 updated: "2024-04-14"
 thanks: ""

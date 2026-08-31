@@ -1,5 +1,8 @@
 ---
 slug: "pml"
+type: "note"
+listed: false
+display: "full"
 published: "2023-03-31"
 updated: "2023-03-31"
 thanks: ""

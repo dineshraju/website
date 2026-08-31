@@ -1,5 +1,8 @@
 ---
 slug: "mind-the-gaps"
+type: "note"
+listed: true
+display: "full"
 published: "2023-10-22"
 updated: "2023-10-22"
 thanks: "Cedric@https://twitter.com/ejames_c"

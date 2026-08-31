@@ -9,6 +9,7 @@ import {
   parseBookAst,
   parseTranscriptAst
 } from '../../lib/note-ast'
+import { NOTE_TYPES, shouldHideWithCss } from '../../lib/note-policy'
 
 const Footer = (frontmatter) => {
   return (
@@ -52,11 +53,11 @@ const RegularTemplate = (frontmatter, html) => {
   )
 }
 
-const BookTemplate = (frontmatter, htmlAst) => {
+const BookTemplate = (frontmatter, htmlAst, hideWithCss) => {
   const chapters = parseBookAst(htmlAst)
   const anchors = {}
 
-  const hiddenClass = process.env.GATSBY_DEV ? '' : ' bookquotehidden'
+  const hiddenClass = hideWithCss ? ' bookquotehidden' : ''
 
   return (
     <div>
@@ -178,13 +179,15 @@ const BlogPostTemplate = ({ data }) => {
   const { frontmatter, html, htmlAst } = data.markdownRemark
   const processedHtml = expandIPFSReferences(html)
   const processedHtmlAst = mapAstStrings(htmlAst, expandIPFSReferences)
+  const preview = Boolean(process.env.GATSBY_DEV)
+  const hideWithCss = shouldHideWithCss(frontmatter, preview)
 
   React.useEffect(() => {
     const urlHash = typeof window !== 'undefined' ? window.location.hash.substr(1) : null
     if (urlHash) {
       const elem = window.document.getElementById(urlHash)
-      if (frontmatter.book) {
-        if (elem) {
+      if (frontmatter.type === NOTE_TYPES.BOOK_QUOTES) {
+        if (elem && hideWithCss) {
           elem.parentElement.parentElement.classList.remove('bookquotehidden')
           elem.classList.remove('bookquotehidden')
           Array.from(window.document.getElementsByClassName('bookrow bookquotehidden')).forEach(e => e.remove())
@@ -194,17 +197,22 @@ const BlogPostTemplate = ({ data }) => {
         if (elem) { elem.classList.add('highlight') }
       }
     }
-    if (frontmatter.book) {
+    if (frontmatter.type === NOTE_TYPES.BOOK_QUOTES) {
       const elem = window.document.getElementById('booktitle')
       if (elem) { elem.classList.remove('bookfadein') }
     }
   })
 
-  if (frontmatter.transcript) { return TranscriptTemplate(frontmatter, processedHtmlAst) }
-
-  if (frontmatter.book) { return BookTemplate(frontmatter, processedHtmlAst) }
-
-  return RegularTemplate(frontmatter, processedHtml)
+  switch (frontmatter.type) {
+    case NOTE_TYPES.TRANSCRIPT:
+      return TranscriptTemplate(frontmatter, processedHtmlAst)
+    case NOTE_TYPES.BOOK_QUOTES:
+      return BookTemplate(frontmatter, processedHtmlAst, hideWithCss)
+    case NOTE_TYPES.NOTE:
+      return RegularTemplate(frontmatter, processedHtml)
+    default:
+      throw new Error(`Unsupported note type: ${frontmatter.type}`)
+  }
 }
 
 export const pageQuery = graphql`
@@ -215,6 +223,9 @@ export const pageQuery = graphql`
       frontmatter {
         updated(formatString: "Do MMM, YYYY")
         published(formatString: "Do MMM, YYYY")
+        type
+        listed
+        display
         transcript
         book
         author
@@ -228,12 +239,13 @@ export const pageQuery = graphql`
 `
 
 export const Head = ({ data }) => {
+  const { frontmatter, htmlAst } = data.markdownRemark
   return (
     <>
-      <title>{ data.markdownRemark.frontmatter.book || data.markdownRemark.htmlAst.children[0].children[0].value }</title>
+      <title>{ frontmatter.type === NOTE_TYPES.BOOK_QUOTES ? frontmatter.book : htmlAst.children[0].children[0].value }</title>
       <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafybeify2jkbx7hyqqb6siu4sn2xhtoroj7f7zjuseub6hmvhj3yfovojm') } />
-      <link rel='canonical' href={ `${config.siteMetadata.siteUrl}notes/${data.markdownRemark.frontmatter.slug}/` } />
-      <meta property='og:image' content= { expandIPFS(data.markdownRemark.frontmatter.ogimage || 'bafybeieg2hv4pfvkccj6axnaqzhv3ue3jsifx4ws4zfw6ld3d4i7r37x2y') } />
+      <link rel='canonical' href={ `${config.siteMetadata.siteUrl}notes/${frontmatter.slug}/` } />
+      <meta property='og:image' content= { expandIPFS(frontmatter.ogimage || 'bafybeieg2hv4pfvkccj6axnaqzhv3ue3jsifx4ws4zfw6ld3d4i7r37x2y') } />
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-B9LVX0CBPY" />
       <Script>
         {`

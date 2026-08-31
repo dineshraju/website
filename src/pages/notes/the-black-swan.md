@@ -1,5 +1,8 @@
 ---
 slug: "the-black-swan"
+type: "book-quotes"
+listed: false
+display: "deep-link-only"
 published: "2023-10-16"
 updated: "2023-10-16"
 book: "The Black Swan"

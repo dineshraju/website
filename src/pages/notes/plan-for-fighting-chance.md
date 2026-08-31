@@ -1,5 +1,8 @@
 ---
 slug: "plan-for-fighting-chance"
+type: "note"
+listed: true
+display: "full"
 published: "2024-04-19"
 updated: "2024-10-13"
 thanks: ""

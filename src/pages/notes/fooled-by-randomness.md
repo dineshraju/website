@@ -1,5 +1,8 @@
 ---
 slug: "fooled-by-randomness"
+type: "book-quotes"
+listed: false
+display: "deep-link-only"
 published: "2023-10-15"
 updated: "2023-10-15"
 book: "Fooled by Randomness"

@@ -1,5 +1,8 @@
 ---
 slug: "highest-order-bit"
+type: "note"
+listed: true
+display: "full"
 published: "2023-01-07"
 updated: "2023-05-28"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"

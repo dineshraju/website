@@ -1,5 +1,8 @@
 ---
 slug: "socials"
+type: "note"
+listed: true
+display: "full"
 published: "2022-12-30"
 updated: "2024-11-15"
 ---

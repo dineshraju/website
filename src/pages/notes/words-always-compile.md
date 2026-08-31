@@ -1,5 +1,8 @@
 ---
 slug: "words-always-compile"
+type: "note"
+listed: true
+display: "full"
 published: "2023-05-18"
 updated: "2023-05-18"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"

@@ -1,5 +1,8 @@
 ---
 slug: "you-can-disagree"
+type: "note"
+listed: true
+display: "full"
 published: "2023-05-20"
 updated: "2023-05-20"
 ---

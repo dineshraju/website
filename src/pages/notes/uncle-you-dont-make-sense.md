@@ -1,5 +1,8 @@
 ---
 slug: "uncle-you-dont-make-sense"
+type: "note"
+listed: true
+display: "full"
 published: "2023-07-25"
 updated: "2023-10-22"
 thanks: "Cedric@https://twitter.com/ejames_c, Visa@https://twitter.com/visakanv"

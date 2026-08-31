@@ -1,5 +1,8 @@
 ---
 slug: "mirror-session"
+type: "note"
+listed: true
+display: "full"
 published: "2024-10-13"
 updated: "2024-10-20"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"

@@ -1,5 +1,8 @@
 ---
 slug: "what-to-know"
+type: "note"
+listed: true
+display: "full"
 published: "2023-05-28"
 updated: "2023-05-28"
 thanks: "Cedric@https://twitter.com/ejames_c, Visa@https://twitter.com/visakanv"

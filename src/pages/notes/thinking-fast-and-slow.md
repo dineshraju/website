@@ -1,5 +1,8 @@
 ---
 slug: "thinking-fast-and-slow"
+type: "book-quotes"
+listed: false
+display: "deep-link-only"
 published: "2023-10-14"
 updated: "2023-10-14"
 book: "Thinking, Fast and Slow"

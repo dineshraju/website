@@ -1,5 +1,8 @@
 ---
 slug: "opinions"
+type: "note"
+listed: true
+display: "full"
 published: "2023-05-06"
 updated: "2023-05-28"
 thanks: "Visa@https://twitter.com/visakanv, Cedric@https://twitter.com/ejames_c"

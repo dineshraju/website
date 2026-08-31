@@ -1,5 +1,8 @@
 ---
 slug: "writing-notes"
+type: "note"
+listed: true
+display: "full"
 published: "2022-12-29"
 updated: "2024-09-20"
 ---
