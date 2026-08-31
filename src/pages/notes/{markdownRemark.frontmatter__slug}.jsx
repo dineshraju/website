@@ -2,6 +2,13 @@ import * as React from "react"
 import { Link, graphql, Script } from 'gatsby'
 import "../../styles/simple.css"
 import config from '../../../gatsby-config'
+import MarkdownAst from '../../components/MarkdownAst'
+import {
+  generateAnchorLink,
+  mapAstStrings,
+  parseBookAst,
+  parseTranscriptAst
+} from '../../lib/note-ast'
 
 const Footer = (frontmatter) => {
   return (
@@ -11,20 +18,6 @@ const Footer = (frontmatter) => {
         <Link className="footercat" to={`/notes/`}>other notes</Link>
       </div>
   )
-}
-
-const generateAnchorLink = (text, anchors) => {
-  let link = text
-    .substring(0, 40)
-    .replaceAll(/<\/?\w+>/g, '')
-    .replaceAll(/[',’]/g, '')
-    .replaceAll(/\W/g, '-')
-    .toLowerCase()
-    .split('-').slice(0,3).join('-')
-
-    while (anchors[link]) { link = link + '-' }
-    anchors[link] = true
-    return link
 }
 
 const RegularTemplate = (frontmatter, html) => {
@@ -59,11 +52,8 @@ const RegularTemplate = (frontmatter, html) => {
   )
 }
 
-const BookTemplate = (frontmatter, html) => {
-
-  // TODO: find better way to do this
-  const cleanedHtml = html.replaceAll(/\n/gm, '').replaceAll(/<\/p><p>{/g, '{').replaceAll(/<\/p><p>/g, '<br />').replaceAll(/<\/p>/g, '')
-  const items = Array.from(cleanedHtml.matchAll(/{.+?}[^{]+/gm))
+const BookTemplate = (frontmatter, htmlAst) => {
+  const chapters = parseBookAst(htmlAst)
   const anchors = {}
 
   const hiddenClass = process.env.GATSBY_DEV ? '' : ' bookquotehidden'
@@ -78,24 +68,29 @@ const BookTemplate = (frontmatter, html) => {
       </div>
       <div>
       {
-        items.map((item, chidx) => {
-          const matches = item.toString().match('^{(.+)} (.+)$')
-          const chapter = matches[1]
-
-          const generateQuotes = () => matches[2].split('<br />').map((e, qidx) => {
-            const anc = generateAnchorLink(e, anchors)
+        chapters.map((chapter, chidx) => {
+          const generateQuotes = () => chapter.quotes.map((quote, qidx) => {
+            const anc = generateAnchorLink(quote.anchorText, anchors)
 
             return (
               <div key={`q${qidx}`} id={anc} className={`bookquoterow${hiddenClass}`}>
                 <Link to={ `#${anc}`} className="bookanchor">#</Link>
-                <div className="bookquote">{e.split('<br>').map((s, qbidx) => (<p key={`q-${qidx}-${qbidx}`} >{s}</p>))}</div>
+                <div className="bookquote">
+                  {quote.blocks.map((block, qbidx) => (
+                    <MarkdownAst
+                      key={`q-${qidx}-${qbidx}`}
+                      node={block}
+                      prefix={`book-${chidx}-${qidx}-${qbidx}`}
+                    />
+                  ))}
+                </div>
               </div>
             )
           })
 
           return (
             <div key={`ch${chidx}`} className={`bookrow${hiddenClass}`}>
-              <div className={`bookchaptertitle`}>{chapter}</div>
+              <div className={`bookchaptertitle`}>{chapter.title}</div>
               <div className={`bookchapterrow`}>{generateQuotes()}</div>
             </div>
           )
@@ -109,12 +104,8 @@ const BookTemplate = (frontmatter, html) => {
   )
 }
 
-const TranscriptTemplate = (frontmatter, html) => {
-
-  // TODO: find better way to do this
-  const title = html.match('<h2>(.+?)</h2>')[1]
-  const cleanedHtml = html.replaceAll(/\n/gm, '').replaceAll(/<\/p><p>{/g, '{').replaceAll(/<\/p><p>/g, '<br />').replaceAll(/<\/p>/g, '')
-  const items = Array.from(cleanedHtml.matchAll(/{\d+:\d+:\d+}[^{]+/gm))
+const TranscriptTemplate = (frontmatter, htmlAst) => {
+  const { title, segments } = parseTranscriptAst(htmlAst)
 
   const transcriptFrags = frontmatter.transcript.split('@')
   const transcriptType = transcriptFrags[0] === 'youtube' ? 'YouTube video' : 'unknown'
@@ -145,17 +136,28 @@ const TranscriptTemplate = (frontmatter, html) => {
       </div>
       <div className="transcriptblock">
       {
-        items.map(item => {
-          const segments = item.toString().match('^{(\\d+):(\\d+):(\\d+)}(.+)$')
-          const timeStr = segments.slice(1,4).join("-")
+        segments.map(segment => {
+          const time = [segment.hour, segment.min, segment.sec]
+          const timeStr = time.join("-")
           const anchorLink = `t-${timeStr}`
           return (
             <div key={anchorLink} className={`transcriptrow`}>
               <div className="transcripttime">
-                <a href={timeToLink(...segments.slice(1,4))} target="_blank">{timeToStr(...segments.slice(1,4))}</a>
+                <a href={timeToLink(...time)} target="_blank">{timeToStr(...time)}</a>
                 <Link to={ `#${anchorLink}`} className="transcriptanchor">(#)</Link>
               </div>
-              <div id={anchorLink} className={`transcriptquote`}>{segments[4].split('<br />').map((e, idx) => (<p key={`p-${timeStr}-${idx}`} id={`p-${timeStr}-${idx}`}>{e}</p>))}</div>
+              <div id={anchorLink} className={`transcriptquote`}>
+                {segment.blocks.map((block, idx) => (
+                  <MarkdownAst
+                    key={`p-${timeStr}-${idx}`}
+                    node={{
+                      ...block,
+                      properties: { ...block.properties, id: `p-${timeStr}-${idx}` }
+                    }}
+                    prefix={`transcript-${timeStr}-${idx}`}
+                  />
+                ))}
+              </div>
             </div>
           )
         })
@@ -167,10 +169,15 @@ const TranscriptTemplate = (frontmatter, html) => {
 }
 
 const expandIPFS = hash => `https://ipfs.dineshraju.xyz/${hash}`
+const expandIPFSReferences = value => value.replaceAll(
+  /ipfs:\/\/(baf[A-Za-z2-7]{56})/g,
+  (match, hash) => expandIPFS(hash)
+)
 
 const BlogPostTemplate = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
-  let processedHtml = html.replaceAll(/ipfs:\/\/(baf[A-Za-z2-7]{56})/g, expandIPFS('$1'))
+  const { frontmatter, html, htmlAst } = data.markdownRemark
+  const processedHtml = expandIPFSReferences(html)
+  const processedHtmlAst = mapAstStrings(htmlAst, expandIPFSReferences)
 
   React.useEffect(() => {
     const urlHash = typeof window !== 'undefined' ? window.location.hash.substr(1) : null
@@ -193,9 +200,9 @@ const BlogPostTemplate = ({ data }) => {
     }
   })
 
-  if (frontmatter.transcript) { return TranscriptTemplate(frontmatter, processedHtml) }
+  if (frontmatter.transcript) { return TranscriptTemplate(frontmatter, processedHtmlAst) }
 
-  if (frontmatter.book) { return BookTemplate(frontmatter, processedHtml) }
+  if (frontmatter.book) { return BookTemplate(frontmatter, processedHtmlAst) }
 
   return RegularTemplate(frontmatter, processedHtml)
 }
