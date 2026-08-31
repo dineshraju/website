@@ -1,5 +1,6 @@
 ---
 slug: "uncle-you-dont-make-sense"
+title: "Uncle, You Don’t Make Sense"
 type: "note"
 listed: true
 display: "full"

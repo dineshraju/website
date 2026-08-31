@@ -1,5 +1,6 @@
 ---
 slug: "words-always-compile"
+title: "Words Always Compile"
 type: "note"
 listed: true
 display: "full"

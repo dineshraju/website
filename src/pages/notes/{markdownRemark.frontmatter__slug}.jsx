@@ -201,6 +201,7 @@ export const pageQuery = graphql`
       html
       htmlAst
       frontmatter {
+        title
         updated(formatString: "Do MMM, YYYY")
         published(formatString: "Do MMM, YYYY")
         type
@@ -219,10 +220,10 @@ export const pageQuery = graphql`
 `
 
 export const Head = ({ data }) => {
-  const { frontmatter, htmlAst } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark
   return (
     <>
-      <title>{ frontmatter.type === NOTE_TYPES.BOOK_QUOTES ? frontmatter.book : htmlAst.children[0].children[0].value }</title>
+      <title>{ frontmatter.title }</title>
       <link rel='icon' type='image/png' sizes='32X32' href={ expandIPFS('bafybeify2jkbx7hyqqb6siu4sn2xhtoroj7f7zjuseub6hmvhj3yfovojm') } />
       <link rel='canonical' href={ `${config.siteMetadata.siteUrl}notes/${frontmatter.slug}/` } />
       <meta property='og:image' content= { expandIPFS(frontmatter.ogimage || 'bafybeieg2hv4pfvkccj6axnaqzhv3ue3jsifx4ws4zfw6ld3d4i7r37x2y') } />

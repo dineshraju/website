@@ -7,10 +7,9 @@ const NotesPage = ({ data }) => {
 
   const nodes = data.allMarkdownRemark.nodes.filter(n => n.fileAbsolutePath.match('/pages/notes/')).map(n => ({
     slug: n.frontmatter.slug,
-    title: n.htmlAst.children[0].children[0].value,
+    title: n.frontmatter.title,
     type: n.frontmatter.type,
     listed: n.frontmatter.listed,
-    book: n.frontmatter.book,
     publishedStr: n.frontmatter.publishedStr,
     published: n.frontmatter.published
   }))
@@ -23,7 +22,7 @@ const NotesPage = ({ data }) => {
       nodes.sort((a,b) => parseInt(b.published) - parseInt(a.published)).filter(n => shouldListNote(n, preview)).map(n => (
         <div key={n.slug} className="notesitem">
           <Link className="noteslink" to={`/notes/${n.slug}`}>
-            { n.type === NOTE_TYPES.BOOK_QUOTES ? n.book : n.title }
+            { n.title }
           </Link>
           { n.type === NOTE_TYPES.TRANSCRIPT ? ' (transcript)' : n.type === NOTE_TYPES.BOOK_QUOTES ? ' (quotes)' : '' }
           <div className="notesdate">
@@ -41,12 +40,11 @@ export const pageQuery = graphql`
   allMarkdownRemark {
     nodes {
       fileAbsolutePath
-      htmlAst
       frontmatter {
+        title
         slug
         type
         listed
-        book
         published(formatString: "YYYYMMDD")
         publishedStr: published(formatString: "Do MMM, YYYY")
       }

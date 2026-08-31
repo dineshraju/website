@@ -1,5 +1,6 @@
 ---
 slug: "mirror-session"
+title: "Mirror Session"
 type: "note"
 listed: true
 display: "full"

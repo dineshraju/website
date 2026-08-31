@@ -1,5 +1,6 @@
 ---
 slug: "headsets"
+title: "We Are All Wearing Headsets"
 type: "note"
 listed: true
 display: "full"

@@ -1,5 +1,6 @@
 ---
 slug: "opinions"
+title: "Opinions"
 type: "note"
 listed: true
 display: "full"

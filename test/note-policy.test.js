@@ -38,13 +38,14 @@ const readPolicy = filename => {
   const frontmatter = extractFrontmatter(markdown, filename)
 
   return {
+    title: readScalar(frontmatter, 'title'),
     type: readScalar(frontmatter, 'type'),
     listed: readScalar(frontmatter, 'listed'),
     display: readScalar(frontmatter, 'display')
   }
 }
 
-test('every Markdown note declares policy fields with allowed values', () => {
+test('every Markdown note declares a title and policy fields with allowed values', () => {
   const markdownFiles = fs.readdirSync(notesDirectory)
     .filter(filename => filename.endsWith('.md'))
 
@@ -52,6 +53,7 @@ test('every Markdown note declares policy fields with allowed values', () => {
 
   for (const filename of markdownFiles) {
     const policy = readPolicy(filename)
+    assert.ok(typeof policy.title === 'string' && policy.title.trim(), `${filename} declares a title`)
     assert.ok(Object.values(NOTE_TYPES).includes(policy.type), `${filename} has a valid type`)
     assert.equal(typeof policy.listed, 'boolean', `${filename} declares listed`)
     assert.ok(Object.values(DISPLAY_MODES).includes(policy.display), `${filename} has a valid display`)

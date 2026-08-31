@@ -1,5 +1,6 @@
 ---
 slug: "plan-for-fighting-chance"
+title: "A Plan for Fighting Chance"
 type: "note"
 listed: true
 display: "full"

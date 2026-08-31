@@ -1,5 +1,6 @@
 ---
 slug: "thinking-fast-and-slow"
+title: "Thinking, Fast and Slow"
 type: "book-quotes"
 listed: false
 display: "deep-link-only"

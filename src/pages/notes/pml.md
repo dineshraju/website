@@ -1,5 +1,6 @@
 ---
 slug: "pml"
+title: "Prose Markup Language (PML)"
 type: "note"
 listed: false
 display: "full"

@@ -1,5 +1,6 @@
 ---
 slug: "you-can-disagree"
+title: "You Can Disagree"
 type: "note"
 listed: true
 display: "full"

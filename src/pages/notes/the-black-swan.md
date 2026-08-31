@@ -1,5 +1,6 @@
 ---
 slug: "the-black-swan"
+title: "The Black Swan"
 type: "book-quotes"
 listed: false
 display: "deep-link-only"

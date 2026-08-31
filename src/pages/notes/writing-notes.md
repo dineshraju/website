@@ -1,5 +1,6 @@
 ---
 slug: "writing-notes"
+title: "Writing Notes"
 type: "note"
 listed: true
 display: "full"

@@ -1,5 +1,6 @@
 ---
 slug: "socials"
+title: "Socials"
 type: "note"
 listed: true
 display: "full"

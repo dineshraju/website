@@ -1,5 +1,6 @@
 ---
 slug: "highest-order-bit"
+title: "The Highest-Order Bit"
 type: "note"
 listed: true
 display: "full"

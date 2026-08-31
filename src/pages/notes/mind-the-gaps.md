@@ -1,5 +1,6 @@
 ---
 slug: "mind-the-gaps"
+title: "Mind The Gaps"
 type: "note"
 listed: true
 display: "full"

@@ -1,5 +1,6 @@
 ---
 slug: "fooled-by-randomness"
+title: "Fooled by Randomness"
 type: "book-quotes"
 listed: false
 display: "deep-link-only"

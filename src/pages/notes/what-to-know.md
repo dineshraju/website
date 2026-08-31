@@ -1,5 +1,6 @@
 ---
 slug: "what-to-know"
+title: "What To Know"
 type: "note"
 listed: true
 display: "full"
