@@ -5,7 +5,7 @@ type: "note"
 listed: true
 display: "full"
 published: "2026-09-19"
-updated: "2026-09-19"
+updated: "2026-09-27"
 thanks: "Cedric@https://twitter.com/ejames_c, Visa@https://twitter.com/visakanv"
 ---
 
@@ -59,3 +59,6 @@ As you build antibodies and get enduring relief from a core set of explanations 
 
 Painkillers can help get you outcomes, but only if you know what they do to you and how to use them. Never take more than you need, and channel the illusion of certainty they provide to enter the arena to earn your own antibodies. Most importantly, don't get stuck at the screen getting addicted to podcasts just for the pain relief.
 
+<br />
+
+_Postscript: This note is itself just a painkiller. It gives you new vocabulary to work with, but building an antibody from it still takes a lot of effort. You can tell it's working only when you actually spend less time reaching for new models for relief. If the painkiller to antibody conversion isn't happening, some [higher-order bit](/notes/highest-order-bit/) in your context could be blocking it. A one-on-one chat, like [a mirror session](/notes/mirror-session/), might help you figure out what's missing. This note is meant to give you some shared language to get that conversation started._
